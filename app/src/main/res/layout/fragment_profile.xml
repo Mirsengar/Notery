@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                xmlns:app = "http://schemas.android.com/apk/res-auto"
+                xmlns:tools = "http://schemas.android.com/tools"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                tools:context = "fragments.SettingsFragment" >
+    <androidx.appcompat.widget.AppCompatImageView
+         android:id = "@+id/avatar"
+         android:layout_width = "96dp"
+         android:layout_height = "96dp"
+         android:layout_centerHorizontal = "true"
+         android:layout_marginTop = "32dp"
+         app:srcCompat = "@drawable/ic_person_black_24dp" />
+    <LinearLayout
+         android:id = "@+id/parent"
+         android:layout_width = "match_parent"
+         android:layout_height = "wrap_content"
+         android:layout_centerVertical = "true"
+         android:layout_margin = "16dp"
+         android:layout_marginStart = "16dp"
+         android:layout_marginEnd = "16dp"
+         android:orientation = "vertical"
+         android:paddingTop = "16dp" >
+    <RelativeLayout
+         android:layout_width = "match_parent"
+         android:layout_height = "wrap_content" >
+        <androidx.appcompat.widget.AppCompatImageView
+             android:id = "@+id/emailIcon"
+             style = "@style/profile_icon"
+             app:srcCompat = "@drawable/ic_email_black_24dp" />
+        <androidx.appcompat.widget.AppCompatEditText
+             android:id = "@+id/email"
+             style = "@style/login_text"
+             android:focusable = "false"
+             android:hint = "@string/email"
+             android:imeOptions = "actionNext"
+             android:inputType = "textEmailAddress"
+             android:singleLine = "true" />
+    </RelativeLayout >
+        <RelativeLayout
+             android:layout_width = "match_parent"
+             android:layout_height = "wrap_content"
+             android:layout_marginTop = "8dp" >
+            <androidx.appcompat.widget.AppCompatImageView
+                 android:id = "@+id/fnameIcon"
+                 style = "@style/profile_icon"
+                 app:srcCompat = "@drawable/ic_account_box_black_24dp" />
+            <androidx.appcompat.widget.AppCompatEditText
+                 android:id = "@+id/fname"
+                 style = "@style/login_text"
+                 android:focusable = "false"
+                 android:hint = "@string/fname"
+                 android:imeOptions = "actionNext"
+                 android:inputType = "text"
+                 android:singleLine = "true" />
+        </RelativeLayout >
+        <RelativeLayout
+             android:layout_width = "match_parent"
+             android:layout_height = "wrap_content"
+             android:layout_marginTop = "8dp" >
+            <androidx.appcompat.widget.AppCompatImageView
+                 android:id = "@+id/lnameIcon"
+                 style = "@style/profile_icon"
+                 app:srcCompat = "@drawable/ic_account_box_black_24dp" />
+            <androidx.appcompat.widget.AppCompatEditText
+                 android:id = "@+id/lname"
+                 style = "@style/login_text"
+                 android:focusable = "false"
+                 android:hint = "@string/lname"
+                 android:imeOptions = "actionNext"
+                 android:inputType = "text"
+                 android:singleLine = "true" />
+        </RelativeLayout >
+        <RelativeLayout
+             android:layout_width = "match_parent"
+             android:layout_height = "wrap_content"
+             android:layout_marginTop = "32dp"
+             android:background = "@drawable/button_background_red" >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                 android:id = "@+id/logout"
+                 style = "@style/login_btn"
+                 android:text = "@string/logout" />
+        </RelativeLayout >
+    </LinearLayout >
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:layout_width = "wrap_content"
+         android:layout_height = "wrap_content"
+         android:layout_alignParentEnd = "true"
+         android:layout_alignParentBottom = "true"
+         android:layout_margin = "16dp"
+         android:tint = "@color/colorIcons"
+         app:fabSize = "normal"
+         app:srcCompat = "@drawable/ic_edit_black_24dp" />
+
+
+
+</RelativeLayout >

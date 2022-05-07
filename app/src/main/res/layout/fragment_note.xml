@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                xmlns:app = "http://schemas.android.com/apk/res-auto"
+                xmlns:tools = "http://schemas.android.com/tools"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                tools:context = "fragments.SettingsFragment" >
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+         xmlns:app="http://schemas.android.com/apk/res-auto"
+         android:id="@+id/shimmer_recycler_view"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         app:shimmer_demo_child_count="10"
+         app:shimmer_demo_layout="@layout/layout_note_row_shimmer"
+         app:shimmer_demo_layout_manager_type="linear_vertical"
+         app:shimmer_demo_angle="20"
+         />
+
+    <androidx.appcompat.widget.AppCompatTextView
+         android:id = "@+id/noNote"
+         android:layout_width = "match_parent"
+         android:layout_height = "match_parent"
+         android:gravity = "center"
+         android:text = "@string/noNote"
+         android:textSize = "24sp"
+         android:visibility = "gone" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id = "@+id/add"
+         android:layout_width = "wrap_content"
+         android:layout_height = "wrap_content"
+         android:layout_alignParentEnd = "true"
+         android:layout_alignParentBottom = "true"
+         android:layout_margin = "16dp"
+         android:tint = "@color/colorIcons"
+         app:fabSize = "normal"
+         app:srcCompat = "@drawable/ic_add_black_24dp" />
+</RelativeLayout >

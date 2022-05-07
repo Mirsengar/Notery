@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+     xmlns:android = "http://schemas.android.com/apk/res/android"
+     xmlns:app = "http://schemas.android.com/apk/res-auto"
+     xmlns:tools = "http://schemas.android.com/tools"
+     android:layout_width = "match_parent"
+     android:layout_height = "match_parent"
+     tools:context = ".AddNoteActivity" >
+  
+   <RelativeLayout
+        android:id = "@+id/parent"
+        android:layout_width = "match_parent"
+        android:layout_height = "56dp"
+        android:background = "@color/colorPrimary" >
+        <androidx.appcompat.widget.AppCompatImageView
+             android:id = "@+id/back"
+             android:layout_width = "56dp"
+             android:layout_height = "56dp"
+             android:layout_alignParentStart = "true"
+             android:layout_marginStart = "4dp"
+             android:background = "?selectableItemBackgroundBorderless"
+             android:padding = "16dp"
+             android:tint = "@color/colorIcons"
+             app:srcCompat = "@drawable/ic_arrow_back_black_24dp" />
+        <androidx.appcompat.widget.AppCompatTextView
+             android:layout_width = "match_parent"
+             android:layout_height = "match_parent"
+             android:layout_toStartOf = "@+id/save"
+             android:layout_toEndOf = "@+id/back"
+             android:gravity = "center"
+             android:singleLine = "true"
+             android:text = "@string/addNote"
+             android:textColor = "@color/colorIcons"
+             android:textSize = "16sp"
+             android:textStyle = "bold" />
+        <androidx.appcompat.widget.AppCompatImageView
+             android:id = "@+id/save"
+             android:layout_width = "56dp"
+             android:layout_height = "56dp"
+             android:layout_alignParentEnd = "true"
+             android:layout_marginEnd = "4dp"
+             android:background = "?selectableItemBackgroundBorderless"
+             android:padding = "16dp"
+             android:tint = "@color/colorIcons"
+             app:srcCompat = "@drawable/ic_save_black_24dp" />
+    </RelativeLayout >
+    <LinearLayout
+         android:layout_width = "match_parent"
+         android:layout_height = "match_parent"
+         android:layout_below = "@+id/parent"
+         android:background = "@color/colorDivider"
+         android:orientation = "vertical"
+         >
+        <androidx.appcompat.widget.AppCompatEditText
+             android:id = "@+id/title"
+             android:layout_width = "match_parent"
+             android:layout_height = "wrap_content"
+             android:background = "@null"
+             android:hint = "@string/title"
+             android:maxLength = "50"
+             android:maxLines = "1"
+             android:padding = "16dp"
+             android:singleLine = "true"
+             android:textStyle = "bold" />
+        <androidx.appcompat.widget.AppCompatEditText
+             android:id = "@+id/message"
+             android:layout_width = "match_parent"
+             android:layout_height = "match_parent"
+             android:background = "@null"
+             android:gravity = "start|top"
+             android:hint = "@string/message"
+             android:inputType = "textMultiLine"
+             android:lineSpacingExtra = "10dp"
+             android:maxLength = "5000"
+             android:padding = "16dp" />
+    </LinearLayout >
+    
+
+    <com.github.ybq.android.spinkit.SpinKitView
+         xmlns:app="http://schemas.android.com/apk/res-auto"
+         android:id="@+id/progressBar"
+         android:visibility="invisible"
+         style="@style/SpinKitView.ThreeBounce"
+         android:layout_width="match_parent"
+         android:layout_height="48dp"
+         android:layout_alignParentBottom="true"
+         android:layout_marginTop="4dp"
+         android:layout_gravity="center"
+         app:SpinKit_Color="@color/colorDivider" />
+  </RelativeLayout >

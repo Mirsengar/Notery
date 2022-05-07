@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+     xmlns:android = "http://schemas.android.com/apk/res/android"
+     xmlns:app = "http://schemas.android.com/apk/res-auto"
+     xmlns:tools = "http://schemas.android.com/tools"
+     android:layout_width = "match_parent"
+     android:layout_height = "match_parent"
+     android:background = "@color/colorPrimary2"
+     android:padding = "16dp"
+     tools:context = ".LoginActivity" >
+    <io.supercharge.shimmerlayout.ShimmerLayout
+         android:layout_width = "match_parent"
+         android:layout_height = "wrap_content"
+         android:layout_above = "@+id/parent"
+         android:layout_alignParentTop = "true"
+         android:layout_centerHorizontal = "true"
+         app:shimmer_animation_duration = "5000"
+         app:shimmer_auto_start = "true"
+         app:shimmer_color = "@color/colorPrimaryLight"
+         app:shimmer_reverse_animation = "true" >
+        <RelativeLayout
+             android:layout_width = "match_parent"
+             android:layout_height = "match_parent" >
+            <androidx.appcompat.widget.AppCompatImageView
+                 android:id = "@+id/logo"
+                 android:layout_width = "match_parent"
+                 android:layout_height = "128dp"
+                 android:layout_centerInParent = "true"
+                 android:layout_marginTop = "32dp"
+                 app:srcCompat = "@drawable/logo1" />
+        </RelativeLayout >
+    </io.supercharge.shimmerlayout.ShimmerLayout >
+    <LinearLayout
+         android:id = "@+id/parent"
+         android:layout_width = "match_parent"
+         android:layout_height = "wrap_content"
+         android:layout_centerVertical = "true"
+         android:layout_marginStart = "16dp"
+         android:layout_marginEnd = "16dp"
+         android:orientation = "vertical"
+         android:paddingTop = "16dp" >
+        <RelativeLayout
+             android:layout_width = "match_parent"
+             android:layout_height = "wrap_content" >
+            <androidx.appcompat.widget.AppCompatImageView
+                 android:id = "@+id/emailIcon"
+                 style = "@style/login_icon"
+                 app:srcCompat = "@drawable/ic_email_black_24dp" />
+            <androidx.appcompat.widget.AppCompatEditText
+                 android:id = "@+id/email"
+                 style = "@style/login_text"
+                 android:hint = "@string/email"
+                 android:imeOptions = "actionNext"
+                 android:inputType = "textEmailAddress" />
+
+        </RelativeLayout >
+        <RelativeLayout
+             android:layout_width = "match_parent"
+             android:layout_height = "wrap_content"
+             android:layout_marginTop = "8dp" >
+            <androidx.appcompat.widget.AppCompatImageView
+                 android:id = "@+id/passwordIcon"
+                 style = "@style/login_icon"
+                 app:srcCompat = "@drawable/ic_lock_black_24dp" />
+            <androidx.appcompat.widget.AppCompatEditText
+                 android:id = "@+id/password"
+                 style = "@style/login_text"
+                 android:hint = "@string/password"
+                 android:imeOptions = "actionDone"
+                 android:inputType = "textPassword" />
+        </RelativeLayout >
+        <RelativeLayout
+             android:layout_width = "match_parent"
+             android:layout_height = "wrap_content"
+             android:layout_marginTop = "32dp"
+             android:background = "@drawable/button_background" >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                 android:id = "@+id/login"
+                 style = "@style/login_btn"
+                 android:text = "@string/login" />
+        </RelativeLayout >
+         <com.github.ybq.android.spinkit.SpinKitView
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/progressBar"
+              android:visibility="invisible"
+              style="@style/SpinKitView.ThreeBounce"
+              android:layout_width="match_parent"
+              android:layout_height="48dp"
+              android:layout_marginTop="4dp"
+              android:layout_gravity="center"
+              app:SpinKit_Color="@color/colorDivider" />
+
+    </LinearLayout >
+    <androidx.appcompat.widget.AppCompatTextView
+         android:id = "@+id/register"
+         style = "@style/login_btn"
+         android:layout_alignParentBottom = "true"
+         android:layout_marginTop = "16dp"
+         android:text = "@string/register" />
+</RelativeLayout >
